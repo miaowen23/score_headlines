@@ -1,6 +1,8 @@
 import streamlit as st
 import requests
 
+st.write(" Streamlit app is running.")
+
 API_URL = "http://localhost:8020/score_headlines" 
 
 st.set_page_config(page_title="Headline Sentiment Scorer", layout="centered")
