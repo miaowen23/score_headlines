@@ -50,4 +50,5 @@ if st.button(" Analyze Sentiment"):
             else:
                 st.error(f"API Error: {response.status_code}")
         except Exception as e:
-            st.error(f"Request failed: {e}")
+    st.error(f" Failed to reach API at {API_URL}")
+    st.exception(e)

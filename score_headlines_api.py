@@ -18,7 +18,7 @@ app = FastAPI()
 # ---------- Load model once ----------
 try:
     logging.info("Loading transformer and classifier...")
-    transformer = SentenceTransformer("all-MiniLM-L6-v2")  # Or use your local path
+    transformer = SentenceTransformer("all-MiniLM-L6-v2", device="cpu")
     classifier = joblib.load("svm.joblib")
     logging.info("Models loaded successfully.")
 except Exception as e:
